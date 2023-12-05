@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';  
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
-import 'package:go_router/go_router.dart';               // new
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';                 // new
 
