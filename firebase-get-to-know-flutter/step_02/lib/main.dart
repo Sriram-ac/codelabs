@@ -2,14 +2,13 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';  
 import 'package:firebase_ui_auth/firebase_ui_auth.dart'; // new
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';                 // new
 
-import 'app_state.dart';    
-
+import 'app_state.dart';
 import 'home_page.dart';
 
 void main() {

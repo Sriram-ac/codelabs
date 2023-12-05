@@ -11,7 +11,7 @@ import 'package:gtk_flutter/guest_book.dart';
 import 'package:provider/provider.dart'; // new
 
 import 'app_state.dart'; // new
-import 'package:gtk_flutter/guest_book.dart';                         // new
+import 'package:gtk_flutter/guest_book.dart'; // new
 import 'src/authentication.dart'; // new
 import 'src/widgets.dart';
 
@@ -30,7 +30,6 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 8),
           const IconAndDetail(Icons.calendar_today, 'October 30'),
           const IconAndDetail(Icons.location_city, 'San Francisco'),
-
           Consumer<ApplicationState>(
             builder: (context, appState, _) => AuthFunc(
                 loggedIn: appState.loggedIn,
@@ -49,7 +48,7 @@ class HomePage extends StatelessWidget {
           const Paragraph(
             'Join us for a day full of Firebase Workshops and Pizza!',
           ),
-           Consumer<ApplicationState>(
+          Consumer<ApplicationState>(
             builder: (context, appState, _) => Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -58,6 +57,7 @@ class HomePage extends StatelessWidget {
                   GuestBook(
                     addMessage: (message) =>
                         appState.addMessageToGuestBook(message),
+                    messages: appState.guestBookMessages,
                   ),
                 ],
               ],
